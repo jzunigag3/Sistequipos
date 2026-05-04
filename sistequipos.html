@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SISTEQUIPOS | Ultra Premium</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="sistequipos.css">
+
+</head>
+
+<body>
+
+<header>
+  <h2>SISTEQUIPOS</h2>
+  <nav>
+    <a href="#">Inicio</a>
+    <a href="#servicios">Servicios</a>
+    <a href="#tienda">Tienda</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>Transformamos tu <span>tecnología</span></h1>
+  <p>Soluciones premium en venta, reparación y renta de equipos tecnológicos para empresas exigentes.</p>
+  <button class="btn" onclick="scrollToSection('tienda')">Explorar tienda</button>
+</section>
+
+<section id="servicios">
+  <div class="grid">
+    <div class="card">⚙️ Reparación avanzada</div>
+    <div class="card">💻 Venta de equipos</div>
+    <div class="card">🛠️ Soporte empresarial</div>
+  </div>
+</section>
+
+<div class="parallax"></div>
+
+<section id="tienda">
+  <div class="grid">
+    <div class="card product">
+      <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8">
+      <h3>Laptop Pro</h3>
+      <p class="price">Q5,200</p>
+      <button class="btn" onclick="addToCart('Laptop Pro',5200)">Agregar</button>
+    </div>
+    <div class="card product">
+      <img src="https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04">
+      <h3>Impresora Pro</h3>
+      <p class="price">Q1,800</p>
+      <button class="btn" onclick="addToCart('Impresora Pro',1800)">Agregar</button>
+    </div>
+  </div>
+</section>
+
+<section id="contacto">
+  <h2>Contacto</h2>
+  <p>Email: contacto@sistequipos.com</p>
+</section>
+
+<footer>
+  © SISTEQUIPOS 2026 | Diseño Premium
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script>
+// Animaciones tipo Apple
+ gsap.from(".hero h1",{opacity:0,y:50,duration:1});
+ gsap.from(".hero p",{opacity:0,y:30,duration:1,delay:0.5});
+ gsap.from(".btn",{opacity:0,scale:0.8,duration:1,delay:1});
+
+function scrollToSection(id){
+  document.getElementById(id).scrollIntoView({behavior:'smooth'});
+}
+
+let cart=[];
+function addToCart(name,price){
+  cart.push({name,price});
+  alert("Producto agregado");
+}
+</script>
+
+</body>
+</html>
