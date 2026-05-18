@@ -48,7 +48,7 @@ nav a::after{
 nav a:hover::after{width:100%}
 
 section{
-  min-height:100vh;
+  min-height:85vh;
   display:flex;
   align-items:center;
   padding:100px 60px;
@@ -119,5 +119,4 @@ footer{
   padding:40px;
   background:#020c1b;
 }
-
 
